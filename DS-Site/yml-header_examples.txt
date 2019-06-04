@@ -1,0 +1,43 @@
+---
+title: Story's Mathematical Equation Typesetting
+date: "2018-08-20"
+url: "/math"
+description: ""
+credit: ""
+image: "img/.jpg"
+thumbnail: img/tn-500x500.jpg
+classes:
+- feature-math
+categories:
+- Demo
+---
+
+# js countdown
+<p class="count"></p>
+<script>
+      window.onload = function () {
+          countDown();
+          function addZero(i) {
+              return i < 10 ? "0" + i: i + "";
+          }
+          function countDown() {
+              var nowtime = new Date();
+              var endtime = new Date("2019/06/21,00:00:00");
+              var lefttime = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+              var d = parseInt(lefttime / (24*60*60))
+              var h = parseInt(lefttime / (60 * 60) % 24);
+              var m = parseInt(lefttime / 60 % 60);
+              var s = parseInt(lefttime % 60);
+              d = addZero(d)
+              h = addZero(h);
+              m = addZero(m);
+              s = addZero(s);
+              document.querySelector(".count").innerHTML = `Countdown:  ${d} : ${h} : ${m} : ${s}`;
+              if (lefttime <= 0) {
+                  document.querySelector(".count").innerHTML = "Deadline has passed...";
+                  return;
+              }
+              setTimeout(countDown, 1000);
+            }
+        }
+</script>

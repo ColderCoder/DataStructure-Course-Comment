@@ -1,0 +1,60 @@
+# Site settings
+baseurl = "http://ds.wangmengsd.com"
+title = "Data Structure"
+paginate =5
+buildFuture = true
+theme = "Story"
+
+[[menu.social]]
+  name = "GitHub"
+  title = "fab fa-github-square"
+  url = "https://github.com/wangmengsd/"
+
+[[menu.main]]
+  name = "Home"
+  title = "Home"
+  url = "/"
+  weight=1
+
+[[menu.main]]
+  name = "Codeworks"
+  title = "Codeworks"
+  url = "/code/"
+  weight=2
+  
+[[menu.main]]
+  name = "Archives"
+  title = "Archives"
+  url = "/archives/"
+  weight=3
+
+[[menu.main]]
+  name = "About"
+  title = "About"
+  url = "/about/"
+  weight=4
+  
+[params]
+  author = "wangmengsd"
+  classes = ["math"]
+# Gitalk plugin settings
+    enableGitalk = true
+[params.gitalk] 
+    clientID = "7e10e6e16ab455f5bda5" # Your client ID
+    clientSecret = "8b9736675944671ff7ec03bcea4d0b19f51a6bc8" # Your client secret
+    repo = "DataStructure-Course-Comment" # The repo to store comments
+    owner = "ColderCoder" # Your GitHub ID
+    admin= "ColderCoder" # Required. Github repository owner and collaborators. (Users who having write access to this repository)
+    id= "location.pathname" # The unique id of the page.
+    labels= "gitalk" # Github issue labels. If you used to use Gitment, you can change it
+    perPage= 15 # Pagination size, with maximum 100.
+    pagerDirection= "last" # Comment sorting direction, available values are 'last' and 'first'.
+    createIssueManually= false # If it is 'false', it is auto to make a Github issue when the administrators login.
+    distractionFreeMode= false # Enable hot key (cmd|ctrl + enter) submit comment.
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
